@@ -9,7 +9,7 @@ setup(
     description='Pipelines for single nucleus methylome and multi-omic dataset.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/lhqing/cemba_data',
+    url='https://github.com/GMFranceschini/cemba_data',
     license='MIT',
     classifiers=[
         "License :: OSI Approved :: MIT License",
