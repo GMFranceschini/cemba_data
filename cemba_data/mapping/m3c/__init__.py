@@ -77,8 +77,15 @@ def _parse_bam(bam_path, output_path):
     for read in dfh:
         line = str(read).split()
         if '_' in line[0]:
-            _id = line[0].split('_')[0]
-            split_st = line[0].split('_')[1].split(':')[0]
+            
+            #_id = line[0].split('_')[0]
+            #split_st = line[0].split('_')[1].split(':')[0]
+
+            # Modified to deal with SRA ids
+            _id = line[0].split('/')[0]
+            split_st = line[0].split('/')[1].split('-')[0]
+            
+            
             if line[0][-2:] == '-l':
                 split_st += '-1'
             elif line[0][-2:] == '-r':
